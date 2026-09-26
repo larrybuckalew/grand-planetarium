@@ -158,7 +158,7 @@ export class SolarSystem {
     this.loadTotal += 1;
     this.callbacks.onLoadProgress?.(this.loadDone, this.loadTotal);
     this.texLoader.load(
-      `/textures/${file}`,
+      `${import.meta.env.BASE_URL}textures/${file}`,
       (tex) => {
         tex.colorSpace = THREE.SRGBColorSpace;
         tex.anisotropy = Math.min(8, this.renderer.capabilities.getMaxAnisotropy());
